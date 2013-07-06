@@ -1,0 +1,34 @@
+<h1>Listing flanges</h1>
+
+<h4><a href="#" id="alert2" data-message="Tap Tap... is thing on?">Click Here</a></h4>
+
+<div id="mmmpie" style="width:600px;height:300px"></div>
+<div id="placeholder2" style="width:600px;height:300px"></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flanges.each do |flange| %>
+      <tr>
+        <td><%= flange.name %></td>
+        <td><%= flange.quantity %></td>
+        <td><%= link_to 'Show', flange %></td>
+        <td><%= link_to 'Edit', edit_flange_path(flange) %></td>
+        <td><%= link_to 'Destroy', flange, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flange', new_flange_path %>

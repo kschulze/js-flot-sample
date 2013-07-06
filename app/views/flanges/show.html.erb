@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flange.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @flange.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_flange_path(@flange) %> |
+<%= link_to 'Back', flanges_path %>

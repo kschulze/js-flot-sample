@@ -1,0 +1,36 @@
+<h1>Listing filberts</h1>
+
+<h4><a href="#" id="alert" data-message="Hello from in here">Click Here</a></h4>
+
+<div id="morepie" style="width:600px;height:300px"></div>
+<div id="placeholder" style="width:600px;height:300px"></div>
+<div id="somepie" style="width:600px;height:300px"></div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gezuntas</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @filberts.each do |filbert| %>
+      <tr>
+        <td><%= filbert.name %></td>
+        <td><%= filbert.gezuntas %></td>
+        <td><%= link_to 'Show', filbert %></td>
+        <td><%= link_to 'Edit', edit_filbert_path(filbert) %></td>
+        <td><%= link_to 'Destroy', filbert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Filbert', new_filbert_path %>

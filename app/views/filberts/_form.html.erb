@@ -1,0 +1,25 @@
+<%= form_for(@filbert) do |f| %>
+  <% if @filbert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@filbert.errors.count, "error") %> prohibited this filbert from being saved:</h2>
+
+      <ul>
+      <% @filbert.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :gezuntas %><br>
+    <%= f.number_field :gezuntas %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
