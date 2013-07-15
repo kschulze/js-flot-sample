@@ -1,6 +1,6 @@
 <h1>Listing flanges</h1>
 
-<h4><a href="#" id="alert2" data-message="Tap Tap... is thing on?">Click Here</a></h4>
+<h4><a href="#" id="flanAlert" data-message="Tap Tap... is thing on?">Click Here</a></h4>
 
 <div id="mmmpie" style="width:600px;height:300px"></div>
 <div id="placeholder2" style="width:600px;height:300px"></div>
@@ -32,3 +32,9 @@
 <br>
 
 <%= link_to 'New Flange', new_flange_path %>
+
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        FlotSamp.Flanges.init();
+    })
+</script>

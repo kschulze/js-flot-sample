@@ -1,6 +1,6 @@
 <h1>Listing filberts</h1>
 
-<h4><a href="#" id="alert" data-message="Hello from in here">Click Here</a></h4>
+<h4><a href="#" id="filAlert" data-message="Hello from in here">Click Here</a></h4>
 
 <div id="morepie" style="width:600px;height:300px"></div>
 <div id="placeholder" style="width:600px;height:300px"></div>
@@ -34,3 +34,8 @@
 <br>
 
 <%= link_to 'New Filbert', new_filbert_path %>
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        FlotSamp.Filberts.init();
+    })
+</script>
